@@ -1,4 +1,4 @@
-package study;
+package classe;
 
 public class ProdutoMain {
     public static void main(String[] args) {

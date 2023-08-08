@@ -1,4 +1,4 @@
-package study;
+package classe;
 
 public class Produto {
     String nomeProduto;
