@@ -3,7 +3,7 @@ package arrays;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class CalcularMediaMain {
+public class Array {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
