@@ -13,6 +13,7 @@ public class Matriz {
         int qtdNota = sc.nextInt();
 
         double[][] notas = new double[qtdAluno][qtdNota];
+        System.out.println(notas.getClass());
         double total = 0;
         for (int i = 0; i < qtdAluno; i++) {
             System.out.println("Aluno "+(i+1));
