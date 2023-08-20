@@ -3,7 +3,7 @@ package oo.carros;
 public class CarrosMain {
     public static void main(String[] args) {
 
-        Carro ferrari = new Ferrari(320);
+        Carro ferrari = new Ferrari();
         Civic civic = new Civic(180);
 
         System.out.println(ferrari);
