@@ -6,21 +6,19 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class NovoUsuario {
+public class AlterarUsuario2 {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa");
         EntityManager em = emf.createEntityManager();
 
-        Usuario novoUsuario = new Usuario("Apenas para remover", "removed@del.com");
+        Usuario usuario = em.find(Usuario.class, 2L);
+        em.detach(usuario);
+
+        usuario.setNome("G. Mercado");
+        usuario.setEmail("mercado@paredon.com");
+
         em.getTransaction().begin();
-        em.persist(novoUsuario);
-/*
-        em.persist(new Usuario("Adamastor", "adamastor@gmail.com"));
-        em.persist(new Usuario("Alanpa", "alanpa10@jogado.com"));
-        em.persist(new Usuario("Enner", "valencia@avante.com"));
-        em.persist(new Usuario("Aranguiz", "aranguiz@principe.uk"));
-        em.persist(new Usuario("Rochet", "nino@wall.com"));
-*/
+        em.merge(usuario);
         em.getTransaction().commit();
 
 
