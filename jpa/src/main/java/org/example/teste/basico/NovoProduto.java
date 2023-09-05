@@ -5,7 +5,7 @@ import org.example.modelo.basico.Produto;
 
 public class NovoProduto {
     public static void main(String[] args) {
-        DAO< Produto> dao = new DAO<>(Produto.class);
+        DAO<Produto> dao = new DAO<>(Produto.class);
 
         Produto produto = new Produto("Caneta", 7.45);
 //        dao.abrirTransacao().incluir(produto).fecharTransacao().fechar();

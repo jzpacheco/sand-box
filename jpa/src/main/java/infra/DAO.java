@@ -21,6 +21,7 @@ public class DAO<E> {
     }
 
     public DAO(){
+
         this(null);
     }
     public DAO(Class<E> classe){
@@ -43,6 +44,11 @@ public class DAO<E> {
     public DAO<E> incluirAtomico(E entidade){
         return this.abrirTransacao().incluir(entidade).fecharTransacao();
     }
+
+    public E obterPorId(Object id){
+        return em.find(this.classe, id);
+    }
+
     public List<E> obterTodos(){
         return this.obterTodos(10,0);
     }
